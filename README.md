@@ -184,16 +184,22 @@ During testing I wanted to concetrate on the requirements from the client to see
 Focusing on 
 • create a product, courier, or order dictionary and add it to a list
 for example seen below: 
-        @patch("builtins.input", side_effect= ["coke",float(2.34)])
-        def test_add_item(mock_input):
-            inside_product.add_item()
-            assert cafe_data.products[-1] == {"name":"coke","price":float(2.34)}
+
+
+            @patch("builtins.input", side_effect= ["coke",float(2.34)])
+            def test_add_item(mock_input):
+                inside_product.add_item()
+                assert cafe_data.products[-1] == {"name":"coke","price":float(2.34)}
 • view all products, couriers, or orders
-for example seen below: 
-        @patch("builtins.print")
-        def test_open_courier(mock_print):
-            inside_couriers.open_courier()
-            mock_print.assert_called_with({'name': 'Roger', 'phone': '07985746352'})
+for example seen below:
+
+
+            @patch("builtins.print")
+            def test_open_courier(mock_print):
+                inside_couriers.open_courier()
+                mock_print.assert_called_with({'name': 'Roger', 'phone': '07985746352'})
+
+
 • update the status of an order
 • persist my data
 • STRETCH update or delete a product, order, or courier
