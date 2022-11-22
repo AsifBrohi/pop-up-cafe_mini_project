@@ -3,12 +3,11 @@
 
 
 ## Project Background
-Your client has launched a pop-up café in a busy business district. They
-are offering home-made lunches and refreshments to the surrounding
-offices. As such, they require a software application which helps them to
-log and track orders
+My client has launched a pop-up café in a busy business district. They are offering home-made lunches and refreshments to the surrounding offices. As such, they require a software application which helps them to log and track orders
 
 ## Client requirements
+The client has given me these requirements for the app. 
+
 • I want to maintain a collection of products and couriers.
 • When a customer makes a new order, I need to create this on the
 system.
@@ -22,15 +21,41 @@ out-for-delivery, delivered.
 
 ## How did your design go about meeting the project's requirements?
 
-Every week there was additional requiremnets to meet from the client on specs 
-week 1 
+My design meeting the projects requirment was first to create a list of products and creating a main menu function seen below 
 
-As a user I want to:
+
+def main_menu():
+
+    print("Welcome to my Cafe, Please pick the options below")
+
+    print("***MAIN MENU***")
+    command_ = int(input("0===>EXIT\n1===>PRODUCT MENU\n:"))
+    while True:
+      if command_ == 0:
+        
+        exit()
+      elif command_ == 1:
+        products_menu()
+     
+
+I got user to input an interger either to exit the app or to go to the products menu. 
+This was the structure of my app. 
+
+## Solutoin core 
+
+## How did you guarantee the project's requirements?
+Every week there was additional requiremnets to meet and specs from the client on specs 
+
+Every week I updated the app with only the requirements and specs which were given to me from the client. 
+
+### week 1 
+Client has given me requirements which were 
+
 create a product and add it to a list
 view all products
 STRETCH update or delete a product
-Spec
-A product should just be a string containing its name, i.e: "Coke Zero" A list of products should be a list of strings , i.e: ["Coke Zero"
+
+At the start I just created a Main Menu function which had users input an integer to either exit the app or go to the products page. I implemented a while loop which had If statements for the users input. 
 
 week 2:
 As a user I want to:
@@ -108,13 +133,15 @@ Spec
 "courier": 2, // Courier index
 "status": "preparing",
 "items": "1, 3, 4" // Product index
-}
-
-
-## How did you guarantee the project's requirements?
 
 
 ## If you had more time, what is one thing you would improve upon?
 
 
 ## What did you most enjoy implementing?
+
+test -- guarenteed how it works 
+
+what would i change --> class 
+
+enjoy 
