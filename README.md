@@ -57,7 +57,7 @@ STRETCH update or delete a product
 
 Meeting requiremnts At Week1 created two functions main_menu & product_menu inside main_menu i did a while loop to get users to input an interger to navigate thorught the app seen below:
 
-while True:
+        while True:
             if command_ == 0:
         
             exit()
@@ -80,7 +80,7 @@ Data should be persisted to a .txt file on a new line for each courier or produc
 
 Meeting the requirements of week 2 I created another function courier_menu and added that another elif statment into the main menu function seen below: 
 
-while True:
+        while True:
             if command_ == 0:
         
             exit()
@@ -134,7 +134,9 @@ persist my data (products and couriers)
 STRETCH update or delete a product, order, or courier
 
 During week 3 of the project I had a problem as the three functions  Product menu, Courier menu, Orders Menu needed to be broken down into indivdual functions seen below: 
-    elif user_courier == 2:
+   
+   
+         elif user_courier == 2:
             add_courier = input("ADD COURIER\n")
             courier_list.append(add_courier)
            
@@ -145,12 +147,14 @@ During week 3 of the project I had a problem as the three functions  Product men
             main_menu()
 
 For example I changed the code above to this on a different py file
-    def add_name():
-        new_name= input("""
-        Please Add Name
-        >>>>
-        """)
-        courier_list.append(new_name)
+    
+    
+            def add_name():
+                new_name= input("""
+                Please Add Name
+                >>>>
+                """)
+                courier_list.append(new_name)
 
 
 
@@ -166,11 +170,11 @@ Client has given week 4 requirements
 
 Now products couriers are dict so have to open with a csv file 
 
-def products_menu_file():
-    with open('/Users/AsifB/Documents/Data_engineering_new_gen/pop_up_cafe_project/data/products.csv', 'w+', newline='') as output_file:
-        dict_writer = csv.DictWriter(output_file, key_products)
-        dict_writer.writeheader()
-        dict_writer.writerows(products)
+        def products_menu_file():
+          with open('/Users/AsifB/Documents/Data_engineering_new_gen/pop_up_cafe_project/data/products.csv', w+', newline='') as output_file:
+          dict_writer = csv.DictWriter(output_file, key_products)
+          dict_writer.writeheader()
+          dict_writer.writerows(products)
 
 
 ## Testing 
@@ -200,7 +204,12 @@ One thing I would improve will be implementing class in my app.
 It will reduce the amount of code and make it easier to read for my collagues. 
 
 Possibly use single respsonablity principle for example in my products menu: 
-        class ProductMenu: 
+
+
+
+
+
+          class ProductMenu: 
             def open_menu(self):
               for view_products in cafe_data.products:
                 print(view_products)
