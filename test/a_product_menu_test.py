@@ -49,9 +49,5 @@ def test_update_item_option_3(mock_input):
     inside_product.update_item()
     assert cafe_data.products[3] == {"name":"latte", "price":float(2.60)}
 
-@patch("builtins.input", side_effect= ["4", "rice",float(1.50)])
-def test_update_item_option_4(mock_input):
-    inside_product.update_item()
-    assert cafe_data.products[4] == {"name":"rice", "price":float(1.50)}
 
 

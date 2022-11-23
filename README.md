@@ -165,7 +165,7 @@ For example I changed the code above to this on a different py file
 
 
 
-## week 4
+## Week 4
 Client has given week 4 requirements 
 • create a product, courier, or order dictionary and add it to a list
 • view all products, couriers, or orders
@@ -205,11 +205,8 @@ for example seen below:
                 inside_couriers.open_courier()
                 mock_print.assert_called_with({'name': 'Roger', 'phone': '07985746352'})
 
+ Patch hijacks import and passes thorugh the function then assert if its in the dictionary. mock_input passes it in. 
 
-• update the status of an order
-• persist my data
-• STRETCH update or delete a product, order, or courier
-• BONUS list orders by status or courier
 ## If you had more time, what is one thing you would improve upon?
 One thing I would improve will be implementing class in my app. 
 
@@ -221,12 +218,12 @@ Possibly use single respsonablity principle for example in my products menu:
 
 
 
-          class ProductMenu: 
+          class ProductMenuOpen: 
             def open_menu(self):
               for view_products in cafe_data.products:
                 print(view_products)
     
-
+          class ProductMenuAdd:
             def add_item(self):
                 new_item = input("""
                 Please Add Item
@@ -247,5 +244,9 @@ Possibly use single respsonablity principle for example in my products menu:
                 for i in cafe_data.products:
                     print(i)
 
-
 ## What did you most enjoy implementing?
+I enjoyed implementing testing in my project as it took me a long time. 
+
+Also, to get client requirements to pass the test was very important.
+
+Enjoyed implementing all the skills we learnt in during the week in actual pracice and that improved my python skills. 
