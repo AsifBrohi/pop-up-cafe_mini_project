@@ -25,9 +25,9 @@ The client has given me these requirements for the app.
 • I need to receive regular software updates
 
 
-## How did your design go about meeting the project's requirements?
+## Managing the project
 
-My design meeting the projects requirment was to organise my project folder 
+My design meeting the projects requirements was to organise my project folder this allowed me to keep up to date and orgainsed
 
 
 
