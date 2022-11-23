@@ -204,8 +204,7 @@ for example seen below:
             def test_open_courier(mock_print):
                 inside_couriers.open_courier()
                 mock_print.assert_called_with({'name': 'Roger', 'phone': '07985746352'})
-
-![image](https://user-images.githubusercontent.com/52333702/203525814-71c6bd4a-c1bf-4fe4-9b26-b04d143297d5.png)
+![image](https://user-images.githubusercontent.com/52333702/203526349-cb7b0708-582f-478c-b9ce-7d738828c441.png)
 
 
 • update the status of an order
