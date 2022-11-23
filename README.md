@@ -204,6 +204,7 @@ for example seen below:
             def test_open_courier(mock_print):
                 inside_couriers.open_courier()
                 mock_print.assert_called_with({'name': 'Roger', 'phone': '07985746352'})
+![image](https://user-images.githubusercontent.com/52333702/203526349-cb7b0708-582f-478c-b9ce-7d738828c441.png)
 
  Patch hijacks import and passes thorugh the function then assert if its in the dictionary. mock_input passes it in. 
 
