@@ -27,8 +27,7 @@ The client has given me these requirements for the app.
 
 ## How did your design go about meeting the project's requirements?
 
-My design meeting the projects requirment was first to create a list of products and creating a main menu function seen below 
-
+My design meeting the projects requirment was to organise my project folder 
 
 
 
@@ -36,8 +35,7 @@ My design meeting the projects requirment was first to create a list of products
 
      
 
-I got user to input an interger either to exit the app or to go to the products menu. 
-This was the structure of my app. 
+
 
 ## How did you guarantee the project's requirements?
 Every week there was additional requiremnets to meet and specs from the client.
