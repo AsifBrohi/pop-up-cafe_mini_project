@@ -95,6 +95,7 @@ Meeting the requirements of week 2 I created another function courier_menu and a
 
             elif command == 2:
             courier_menu()
+
 Then created two extra functions for data being peristed to a .txt file and added it when user exits app it saves the changes into a txt file. 
 
 
@@ -108,11 +109,11 @@ Then created two extra functions for data being peristed to a .txt file and adde
         courier.write(courier_+"\n")
       courier.close()
 
-while True:
-      if command_ == 0:
-        read_file()
-        read_courier_file()
-        exit()
+        while True:
+            if command_ == 0:
+            read_file()
+            read_courier_file()
+            exit()
 
 Also, created a orders_menu function and added that to mainmenu while loop seen below
 
