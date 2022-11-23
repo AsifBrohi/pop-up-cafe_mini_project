@@ -196,9 +196,7 @@ Now products couriers are dict so have to open with a csv file
 During testing I wanted to concetrate on the requirements from the client to see if they pass the test. To show that the requiremnts work correctly. For all my testing I used pytest patch method
 
 Focusing on 
-• create a product, courier, or order dictionary and add it to a list
-for example seen below: 
-
+• updating existing courier seen below:
 
             @patch("builtins.input", side_effect = ["0","Aidan", "07986465723"])
             def test_update_name_option_0(mock_input):
