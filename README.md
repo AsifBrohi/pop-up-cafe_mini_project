@@ -1,4 +1,4 @@
-# pop-up-cafe_mini_project
+# Mini Project
 
 
 
@@ -30,18 +30,10 @@ The client has given me these requirements for the app.
 My design meeting the projects requirment was first to create a list of products and creating a main menu function seen below 
 
 
-    def main_menu():
 
-        print("Welcome to my Cafe, Please pick the options below")
 
-        print("***MAIN MENU***")
-        command_ = int(input("0===>EXIT\n1===>PRODUCT MENU\n:"))
-        while True:
-            if command_ == 0:
-        
-            exit()
-            elif command_ == 1:
-            products_menu()
+
+
      
 
 I got user to input an interger either to exit the app or to go to the products menu. 
@@ -183,31 +175,41 @@ Now products couriers are dict so have to open with a csv file
           dict_writer.writeheader()
           dict_writer.writerows(products)
 
+## Function Demo :
+
+        def update_name():
+            for product_index , value in enumerate(courier_dict):
+            print(product_index, value)
+            update_courier = input("""
+            Please use the index to pick a product to update
+            >>>>
+             """)
+            if update_courier:
+              new_name = input("New Name? ")
+              new_price = input("New Phone Number?")
+              courier_dict[int(update_courier)]["name"] = new_name
+              courier_dict[int(update_courier)]["phone"] = new_price
+            for couriers in courier_dict:
+                print(couriers)
 
 ## Testing 
 
-During testing I wanted to concetrate on the requirements from the client to see if they pass the test. For all my testing I used pytest mock method
+During testing I wanted to concetrate on the requirements from the client to see if they pass the test. To show that the requiremnts work correctly. For all my testing I used pytest patch method
 
 Focusing on 
 • create a product, courier, or order dictionary and add it to a list
 for example seen below: 
 
 
-            @patch("builtins.input", side_effect= ["coke",float(2.34)])
-            def test_add_item(mock_input):
-                inside_product.add_item()
-                assert cafe_data.products[-1] == {"name":"coke","price":float(2.34)}
-• view all products, couriers, or orders
-for example seen below:
+            @patch("builtins.input", side_effect = ["0","Aidan", "07986465723"])
+            def test_update_name_option_0(mock_input):
+               inside_couriers.update_name()
+               assert cafe_data.courier_dict[0] == {"name":"Aidan","phone":"07986465723"}
 
 
-            @patch("builtins.print")
-            def test_open_courier(mock_print):
-                inside_couriers.open_courier()
-                mock_print.assert_called_with({'name': 'Roger', 'phone': '07985746352'})
 ![image](https://user-images.githubusercontent.com/52333702/203526349-cb7b0708-582f-478c-b9ce-7d738828c441.png)
 
- Patch hijacks import and passes thorugh the function then assert if its in the dictionary. mock_input passes it in. 
+ Patch hijacks import and passes through the function then assert if its in the dictionary. mock_input passes it in. 
 
 ## If you had more time, what is one thing you would improve upon?
 One thing I would improve will be implementing class in my app. 
